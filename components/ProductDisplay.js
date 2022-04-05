@@ -30,7 +30,9 @@ app.component("product-display", {
         <button class="button" :class="{disabledButton: !inStock}" :disabled="!inStock" @click="addToCart">Add to
           Cart</button>
       </div>
-      <review-list v-if="reviews.length" :reviews="reviews"></review-list>      <review-form @review submitted="addReview"></review-form>    </div>
+      <review-list v-if="reviews.length" :reviews="reviews"></review-list>
+      <review-form @review-submitted="addReview"></review-form>
+      </div>
   </div>`,
   data() {
     return {
